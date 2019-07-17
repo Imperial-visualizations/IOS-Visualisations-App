@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 
 //TODO - Fix UI style (truncation on back button etc)
@@ -19,6 +20,10 @@ import UIKit
 struct Visualisation: Codable {
     var id: Int
     let name, info, url_name, tags, imageURL, gifURL: String
+}
+
+struct DataModel: Codable {
+    let Visualisations: [Visualisation]
 }
 
 //replaced with JSON data later
@@ -57,15 +62,19 @@ class ViewController: UIViewController {
     var selectedVisualisation = visualisations[0]
     
     func decodeJSON() {
-        let url_name = "https://raw.githubusercontent.com/VedantVarshney/VisualisationsPersonal/master/visData.json"
+        let url_name = "https://raw.githubusercontent.com/VedantVarshney/VisualisationsPersonal/master/DataModel"
         guard let url = URL(string: url_name) else { fatalError("JSON URL not found") }
     
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { fatalError("JSON data not loaded") }
     
             do {
-                let decodedVisualisations = try JSONDecoder().decode([Visualisation].self, from: data)
-                visualisations = decodedVisualisations
+                //let decodedVisualisations = try JSONDecoder().decode([Visualisation].self, from: data)
+                //visualisations = decodedVisualisations
+                
+                let decodedDataModel = try JSONDecoder().decode(DataModel.self, from: data)
+                
+                visualisations = decodedDataModel.Visualisations
                 self.filteredVisualisations = visualisations
                 
                 DispatchQueue.main.async {

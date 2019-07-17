@@ -25,12 +25,19 @@ class GIFViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //clear image cache when preview disappear - prevents memory issues and crash after few GIFs are opened
+    
+    //MEMORY MANAGEMENT
     override func viewDidDisappear(_ animated: Bool = true) {
         SDImageCache.shared.clearMemory()
     }
-    deinit {
-        print("DEALLOCATED GIFViewController class")
-    }
+
+    
+    //For testing
+    
+//    deinit {
+//        print("DEALLOCATED GIFViewController class")
+//    }
 
     /*
     // MARK: - Navigation
