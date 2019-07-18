@@ -11,7 +11,7 @@ import SDWebImage
 
 class GIFViewController: UIViewController {
 
-    @IBOutlet weak var GIFView: UIImageView!
+    @IBOutlet weak var GIFView: SDAnimatedImageView!
     
     var selection = visualisations[0]
     
