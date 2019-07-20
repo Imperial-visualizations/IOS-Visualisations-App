@@ -15,23 +15,14 @@ import SDWebImage
 
 //BUGS - 3D touch does not work on a search filtered view, 3D touch jittery on exit - BSMach error
 
-
-
-struct Visualisation: Codable {
-    var id: Int
-    let name, info, url_name, tags, imageURL, gifURL: String
-}
-
-struct DataModel: Codable {
-    let Visualisations: [Visualisation]
-}
-
 //replaced with JSON data later
 //IMPORTANT - this NEEDS to be a non-empty array for selectedVisualisation to be init. If empty will crash. Before table displayed, all data will be replaced with JSON. Init values only serve to init selectedVisualisation outside functions but within class.
 //Might be bad practice (check) but quick fix...
 
 //global because DetailViewController uses this to have an init value for selectedVis. Might want to look into removing all non-const global variables.
 //only ever changed in decodeJSON
+
+
 var visualisations: [Visualisation] = [
     .init(id:0, name: "", info: "", url_name: "", tags: "", imageURL: "", gifURL: "")
 ]
@@ -39,7 +30,7 @@ var visualisations: [Visualisation] = [
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     //scope functionality not built/needed yet - potential TODO
     func filterForSearch(_ searchText: String, scope: String = "All") {
         filteredVisualisations = visualisations.filter{
@@ -128,15 +119,15 @@ class ViewController: UIViewController {
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: tableView)
         }
- 
     }
-    
+}
+
  
-    override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        DispatchQueue.main.async {
+//            self.tableView.reloadData()
+//        }
+//    }
  
     //Attempt to fix rotation in detailed view - not working
     /*
@@ -154,7 +145,7 @@ class ViewController: UIViewController {
     }
     */
 
-}
+
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -199,10 +190,13 @@ extension ViewController: UISearchResultsUpdating {
 extension ViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        
+    
         guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
         let selectedVis = filteredVisualisations[indexPath.row]
-        //guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell else { return nil}
+        
+        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell else { return nil}
+        
+        previewingContext.sourceRect = cell.frame
         
         let identifier = "GIFViewController"
         guard let GIFVC = storyboard?.instantiateViewController(withIdentifier: identifier) as? GIFViewController else { return nil}
@@ -218,6 +212,8 @@ extension ViewController: UIViewControllerPreviewingDelegate {
         
         let selectedVis = (viewControllerToCommit as! GIFViewController).selection
         
+        print("selectedVis", selectedVis)
+        
         let identifier = "DetailViewController"
         
         //force unwrap?
@@ -229,3 +225,4 @@ extension ViewController: UIViewControllerPreviewingDelegate {
     }
     
 }
+

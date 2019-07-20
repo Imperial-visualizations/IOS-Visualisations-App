@@ -10,6 +10,7 @@
 		9304724F22D8885F007C6E43 /* MasterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304724E22D8885F007C6E43 /* MasterNavigationController.swift */; };
 		93665C5622DC81ED0065092A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93665C5522DC81ED0065092A /* WebKit.framework */; };
 		93665C5822DC8AF40065092A /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93665C5722DC8AF40065092A /* SDWebImage.framework */; };
+		937C85A222E2733E00907BAD /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937C85A122E2733E00907BAD /* FLAnimatedImage.framework */; };
 		938B310322D8D56A0030F7E2 /* GIFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938B310222D8D56A0030F7E2 /* GIFViewController.swift */; };
 		93AB3D5422D7EAA500FF1B16 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB3D5322D7EAA500FF1B16 /* DetailViewController.swift */; };
 		93B0CCE622D7392500504DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0CCE522D7392500504DCA /* AppDelegate.swift */; };
@@ -21,7 +22,7 @@
 		93B0CCFD22D7392700504DCA /* VisualisationsUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0CCFC22D7392700504DCA /* VisualisationsUIKitTests.swift */; };
 		93B0CD0822D7392700504DCA /* VisualisationsUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0CD0722D7392700504DCA /* VisualisationsUIKitUITests.swift */; };
 		93B0CD1622D73FD900504DCA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0CD1522D73FD900504DCA /* TableViewCell.swift */; };
-		93D3ACC422D76958002B4F89 /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3ACC322D76958002B4F89 /* UIImage+GIF.swift */; };
+		93BA817822E3228000CA6332 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA817722E3228000CA6332 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9304724E22D8885F007C6E43 /* MasterNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterNavigationController.swift; sourceTree = "<group>"; };
 		93665C5522DC81ED0065092A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		93665C5722DC8AF40065092A /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		937C85A122E2733E00907BAD /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
 		938B310222D8D56A0030F7E2 /* GIFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFViewController.swift; sourceTree = "<group>"; };
 		93AB3D5322D7EAA500FF1B16 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		93B0CCE222D7392500504DCA /* VisualisationsUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualisationsUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +64,7 @@
 		93B0CD0722D7392700504DCA /* VisualisationsUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualisationsUIKitUITests.swift; sourceTree = "<group>"; };
 		93B0CD0922D7392700504DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93B0CD1522D73FD900504DCA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		93D3ACC322D76958002B4F89 /* UIImage+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
+		93BA817722E3228000CA6332 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93665C5822DC8AF40065092A /* SDWebImage.framework in Frameworks */,
+				937C85A222E2733E00907BAD /* FLAnimatedImage.framework in Frameworks */,
 				93665C5622DC81ED0065092A /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +98,7 @@
 		93665C5422DC81ED0065092A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				937C85A122E2733E00907BAD /* FLAnimatedImage.framework */,
 				93665C5722DC8AF40065092A /* SDWebImage.framework */,
 				93665C5522DC81ED0065092A /* WebKit.framework */,
 			);
@@ -129,10 +133,10 @@
 				93B0CCE722D7392500504DCA /* SceneDelegate.swift */,
 				9304724E22D8885F007C6E43 /* MasterNavigationController.swift */,
 				93B0CD1522D73FD900504DCA /* TableViewCell.swift */,
+				93BA817722E3228000CA6332 /* Models.swift */,
 				93B0CCE922D7392500504DCA /* ViewController.swift */,
 				938B310222D8D56A0030F7E2 /* GIFViewController.swift */,
 				93AB3D5322D7EAA500FF1B16 /* DetailViewController.swift */,
-				93D3ACC322D76958002B4F89 /* UIImage+GIF.swift */,
 				93B0CCEB22D7392500504DCA /* Main.storyboard */,
 				93B0CCEE22D7392600504DCA /* Assets.xcassets */,
 				93B0CCF022D7392600504DCA /* LaunchScreen.storyboard */,
@@ -296,12 +300,14 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FLAnimatedImage.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SDWebImage.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FLAnimatedImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -317,9 +323,9 @@
 				93B0CCEA22D7392500504DCA /* ViewController.swift in Sources */,
 				93B0CD1622D73FD900504DCA /* TableViewCell.swift in Sources */,
 				93B0CCE622D7392500504DCA /* AppDelegate.swift in Sources */,
-				93D3ACC422D76958002B4F89 /* UIImage+GIF.swift in Sources */,
 				93B0CCE822D7392500504DCA /* SceneDelegate.swift in Sources */,
 				9304724F22D8885F007C6E43 /* MasterNavigationController.swift in Sources */,
+				93BA817822E3228000CA6332 /* Models.swift in Sources */,
 				93AB3D5422D7EAA500FF1B16 /* DetailViewController.swift in Sources */,
 				938B310322D8D56A0030F7E2 /* GIFViewController.swift in Sources */,
 			);

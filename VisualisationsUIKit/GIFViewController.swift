@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import FLAnimatedImage
 
 class GIFViewController: UIViewController {
 
@@ -15,12 +16,22 @@ class GIFViewController: UIViewController {
     
     var selection = visualisations[0]
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //GIFView.loadGif(name: selection.name + "_gif")
         
+        //TODO - RESIZE GIF AND CACHE INSTEAD OF JUST CLEARING!
+        
+        //Slow and not fully working scaling - easier to just clear cache
+        //let transformer = SDImageResizingTransformer(size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), scaleMode: .aspectFit)
+        
+        //GIFView.sd_setImage(with: URL(string: selection.gifURL), placeholderImage: nil, context: [.imageTransformer: transformer])
+        
         GIFView.sd_setImage(with: URL(string: selection.gifURL))
+        
         
         // Do any additional setup after loading the view.
     }
@@ -32,6 +43,10 @@ class GIFViewController: UIViewController {
         SDImageCache.shared.clearMemory()
     }
 
+    override func didReceiveMemoryWarning() {
+        SDImageCache.shared.clearMemory()
+    }
+    
     
     //For testing
     
