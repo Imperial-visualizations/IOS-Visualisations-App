@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "0.3.0",
+  "iOS" : [
+    {
+      "name" : "SDWebImageFLPlugin",
+      "hash" : "9a2908a06bba2c3c85c5249c407bd4b759959ad5b0a6b584ba9c72ed4b10f207"
+    }
+  ]
+}
