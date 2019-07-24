@@ -96,9 +96,10 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Visualisations"
         
-        navigationController?.navigationBar.barTintColor = UIColor.white
+        //White nav bar
+        //navigationController?.navigationBar.barTintColor = UIColor.white
         
-        let logoImageView = UIImageView(image: UIImage(named: "AppIcon"))
+        let logoImageView = UIImageView(image: UIImage(named: "AppIconNoBG"))
         //logoImageView.frame = CGRect(x: 0, y: 0, width: 5, height: 20) //not working
         //logoImageView.contentMode = .scaleAspectFit //looks too fat
         
