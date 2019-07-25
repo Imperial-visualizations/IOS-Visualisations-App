@@ -20,8 +20,11 @@ class TableViewCell: UITableViewCell {
         //ImageView.image = UIImage(named: visualisation.name)
         
         //TODO load and store at viewDidLoad of main ViewController
+        
         ImageView.sd_setImage(with: URL(string: visualisation.imageURL))
+        //ImageView.image = SDImageCache.shared.imageFromCache(forKey: visualisation.imageURL)
         TitleLabel.text = visualisation.name
+        TitleLabel.textColor = UIColor(named: "ImperialBlue")
         InfoLabel.text = visualisation.info
     }
 }

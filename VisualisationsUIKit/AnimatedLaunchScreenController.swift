@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 //TWO GLOBAL VARIABLES needed to avoid pop over segues - might be bad practice - consider changing
 var visualisations: [Visualisation] = [
@@ -37,14 +38,17 @@ class AnimatedLaunchScreenController: UIViewController {
             }.resume()
         }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.isNavigationBarHidden = true
 
         let LoadingLogoImage = UIImage(named: "logo_white_solid_NBG")
-        let background = UIColor(displayP3Red: 0.090, green: 0.238, blue: 0.439, alpha: 1.0)
-        let SplashView = RevealingSplashView(iconImage: LoadingLogoImage!, iconInitialSize: CGSize(width: 60, height: 60), backgroundColor: background)
+        
+        //Cannot use ImperialBlue asset - loading screen should be the same in light & dark mode
+        let LoadingBackground = UIColor(displayP3Red: 0.090, green: 0.238, blue: 0.439, alpha: 1.0)
+        let SplashView = RevealingSplashView(iconImage: LoadingLogoImage!, iconInitialSize: CGSize(width: 160, height: 85), backgroundColor: LoadingBackground)
 
         SplashView.animationType = .heartBeat
 
@@ -53,8 +57,10 @@ class AnimatedLaunchScreenController: UIViewController {
         SplashView.startAnimation(){
             print("completed animation")
         }
-
+        
         decodeJSON()
+        
+        
 
         //let navVC = storyboard!.instantiateViewController(withIdentifier: "ViewController") as! ViewController
 
@@ -62,7 +68,7 @@ class AnimatedLaunchScreenController: UIViewController {
         SplashView.heartAttack = true
         
         //BOTCH - need to delay segue to allow animation to play
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1500), execute: {
             self.performSegue(withIdentifier: "replaceSegue", sender: self)
         })
         

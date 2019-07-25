@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Visualisation: Codable {
     var id: Int
@@ -16,3 +17,4 @@ struct Visualisation: Codable {
 struct DataModel: Codable {
     let Visualisations: [Visualisation]
 }
+

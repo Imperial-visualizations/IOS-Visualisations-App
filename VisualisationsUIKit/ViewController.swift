@@ -66,12 +66,16 @@ class ViewController: UIViewController {
         //TODO - prefetch?
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "ImperialBlue")!]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "ImperialBlue")!]
         title = "Visualisations"
         
         //White nav bar
         //navigationController?.navigationBar.barTintColor = UIColor.white
         
+        //AppIconNoBG is a template
         let logoImageView = UIImageView(image: UIImage(named: "AppIconNoBG"))
+        logoImageView.tintColor = UIColor(named: "ImperialBlue")
         //logoImageView.frame = CGRect(x: 0, y: 0, width: 5, height: 20) //not working
         //logoImageView.contentMode = .scaleAspectFit //looks too fat
         

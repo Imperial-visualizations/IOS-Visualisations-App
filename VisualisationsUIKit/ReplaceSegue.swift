@@ -11,7 +11,6 @@ import UIKit
 class ReplaceSegue: UIStoryboardSegue {
 
     override func perform() {
-        
         source.navigationController?.setViewControllers([self.destination], animated: false)
     }
 }
