@@ -22,11 +22,6 @@ import SDWebImage
 //global because DetailViewController uses this to have an init value for selectedVis. Might want to look into removing all non-const global variables.
 //only ever changed in decodeJSON
 
-
-var visualisations: [Visualisation] = [
-    .init(id:0, name: "", info: "", url_name: "", tags: "", imageURL: "", gifURL: "")
-]
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -45,51 +40,28 @@ class ViewController: UIViewController {
         }
     }
     
-    var filteredVisualisations = [Visualisation]()
+    //var filteredVisualisations = [Visualisation]()
     
     //initialised - actual value doesn't matter - will be changed before segue
     
     //IMPORTANT - need this variable to be accessible to all funcs in class but also need to give it an initial value of correct type (object Visualisation). So, visualisations CANNOT be empty here otherwise will crash.
     var selectedVisualisation = visualisations[0]
     
-    func decodeJSON() {
-        let url_name = "https://raw.githubusercontent.com/VedantVarshney/VisualisationsPersonal/master/DataModel"
-        guard let url = URL(string: url_name) else { fatalError("JSON URL not found") }
-    
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
-            guard let data = data else { fatalError("JSON data not loaded") }
-    
-            do {
-                //let decodedVisualisations = try JSONDecoder().decode([Visualisation].self, from: data)
-                //visualisations = decodedVisualisations
-                
-                let decodedDataModel = try JSONDecoder().decode(DataModel.self, from: data)
-                
-                visualisations = decodedDataModel.Visualisations
-                self.filteredVisualisations = visualisations
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print(error)
-            }
-    
-        }.resume()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        decodeJSON()
+        DispatchQueue.main.async {
+                    self.tableView.reloadData()
+        }
         
-        
-        //WRONG - check!
-        //filtered visualisations set inside viewDidLoad because JSON code needs to be in func. Initial init is outside func to be as accessible by all funcs in class.
-        //filteredVisualisations = visualisations
+        navigationController?.isNavigationBarHidden = false
         
         tableView.delegate = self
         tableView.dataSource = self
+
+        //WRONG - check!
+        //filtered visualisations set inside viewDidLoad because JSON code needs to be in func. Initial init is outside func to be as accessible by all funcs in class.
+        //filteredVisualisations = visualisations
         
         //TODO - prefetch?
         
