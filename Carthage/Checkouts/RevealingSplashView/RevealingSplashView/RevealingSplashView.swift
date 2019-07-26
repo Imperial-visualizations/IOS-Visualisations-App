@@ -72,7 +72,7 @@ open class RevealingSplashView: UIView, SplashAnimatable{
     open var animationType: SplashAnimationType = SplashAnimationType.twitter
     
     /// The duration of the animation, default to 1.5 seconds. In the case of heartBeat animation recommended value is 3
-    open var duration: Double = 2
+    open var duration: Double = 2.2
     
     /// The delay of the animation, default to 0.5 seconds
     open var delay: Double = 0.5

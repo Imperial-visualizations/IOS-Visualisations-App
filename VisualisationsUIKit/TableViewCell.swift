@@ -16,13 +16,13 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var InfoLabel: UILabel!
     
     func setCell(visualisation: Visualisation){
-        //ImageView.loadGif(name: visualisation.name + "_gif")
-        //ImageView.image = UIImage(named: visualisation.name)
         
-        //TODO load and store at viewDidLoad of main ViewController
+        //TODO? load and store at viewDidLoad of main ViewController
         
+       //ImageView.sd_imageTransition = SDWebImageTransition.fade
         ImageView.sd_setImage(with: URL(string: visualisation.imageURL))
         //ImageView.image = SDImageCache.shared.imageFromCache(forKey: visualisation.imageURL)
+        
         TitleLabel.text = visualisation.name
         TitleLabel.textColor = UIColor(named: "ImperialBlue")
         InfoLabel.text = visualisation.info

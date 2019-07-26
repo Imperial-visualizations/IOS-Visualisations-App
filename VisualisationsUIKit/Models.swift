@@ -18,3 +18,9 @@ struct DataModel: Codable {
     let Visualisations: [Visualisation]
 }
 
+//TWO GLOBAL VARIABLES needed to avoid pop over segues - might be bad practice - consider changing
+var visualisations: [Visualisation] = [
+    .init(id:0, name: "", info: "", url_name: "", tags: "", imageURL: "", gifURL: "")
+]
+
+var filteredVisualisations = [Visualisation]()

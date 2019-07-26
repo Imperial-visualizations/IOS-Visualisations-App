@@ -9,36 +9,10 @@
 import UIKit
 import SDWebImage
 
-//TWO GLOBAL VARIABLES needed to avoid pop over segues - might be bad practice - consider changing
-var visualisations: [Visualisation] = [
-    .init(id:0, name: "", info: "", url_name: "", tags: "", imageURL: "", gifURL: "")
-]
-
-var filteredVisualisations = [Visualisation]()
-
 class AnimatedLaunchScreenController: UIViewController {
 
-    func decodeJSON() {
-            let url_name = "https://raw.githubusercontent.com/VedantVarshney/VisualisationsPersonal/master/DataModel"
-            guard let url = URL(string: url_name) else { fatalError("JSON URL not found") }
+    var reachability: Reachability?
 
-            URLSession.shared.dataTask(with: url) { (data, _, _) in
-                guard let data = data else { fatalError("JSON data not loaded") }
-
-                do {
-
-                    let decodedDataModel = try JSONDecoder().decode(DataModel.self, from: data)
-                    visualisations = decodedDataModel.Visualisations
-                    filteredVisualisations = decodedDataModel.Visualisations
-
-                } catch {
-                    print(error)
-                }
-
-            }.resume()
-        }
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,22 +29,36 @@ class AnimatedLaunchScreenController: UIViewController {
         self.view.addSubview(SplashView)
 
         SplashView.startAnimation(){
-            print("completed animation")
+            self.performSegue(withIdentifier: "replaceSegue", sender: self)
         }
         
-        decodeJSON()
+        reachability = try? Reachability()
+        
+        //NOT WORKING - PRIORITY
+//        reachability?.whenReachable = { reachability in
+//            DispatchQueue.main.async {
+//                print("reached")
+//                NetworkManager.SharedInstance.decodeJSON()
+//                SplashView.heartAttack = true
+//            }
+//        }
         
         
-
-        //let navVC = storyboard!.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-
+        //TEMPORARY
+        if reachability?.connection != .unavailable {
+            print("reachable")
+            NetworkManager.SharedInstance.decodeJSON()
+            SplashView.heartAttack = true
+        }
+        
+        
+        
         //ANIMATION TO COMPLETE BEFORE TRANSITION TO NEW VC
-        SplashView.heartAttack = true
         
         //BOTCH - need to delay segue to allow animation to play
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1500), execute: {
-            self.performSegue(withIdentifier: "replaceSegue", sender: self)
-        })
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1500), execute: {
+//            self.performSegue(withIdentifier: "replaceSegue", sender: self)
+//        })
         
         print("done")
 
