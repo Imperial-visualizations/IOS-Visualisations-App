@@ -29,6 +29,7 @@ class AnimatedLaunchScreenController: UIViewController {
         self.view.addSubview(SplashView)
 
         SplashView.startAnimation(){
+            //on completion of animation
             self.performSegue(withIdentifier: "replaceSegue", sender: self)
         }
         
@@ -47,18 +48,32 @@ class AnimatedLaunchScreenController: UIViewController {
         //TEMPORARY
         if reachability?.connection != .unavailable {
             print("reachable")
-            NetworkManager.SharedInstance.decodeJSON()
-            SplashView.heartAttack = true
+            
+            //Decode JSON - need to exit splash view only when fetch is finished, cannot access SplashView if decoding code is a method in NetworkManager. URLSession is async!
+            
+            let url_name = "https://api.myjson.com/bins/of7n9"
+            //let url_name = "https://raw.githubusercontent.com/VedantVarshney/VisualisationsPersonal/master/DataModel"
+            guard let url = URL(string: url_name) else { fatalError("JSON URL not found") }
+
+            URLSession.shared.dataTask(with: url) { (data, _, _) in
+                guard let data = data else { fatalError("JSON data not loaded") }
+
+                do {
+
+                    let decodedDataModel = try JSONDecoder().decode(DataModel.self, from: data)
+                    visualisations = decodedDataModel.Visualisations
+                    filteredVisualisations = decodedDataModel.Visualisations
+                    
+                    SplashView.heartAttack = true
+                    
+
+                } catch {
+                    print(error)
+                }
+
+            }.resume()
         }
         
-        
-        
-        //ANIMATION TO COMPLETE BEFORE TRANSITION TO NEW VC
-        
-        //BOTCH - need to delay segue to allow animation to play
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1500), execute: {
-//            self.performSegue(withIdentifier: "replaceSegue", sender: self)
-//        })
         
         print("done")
 
