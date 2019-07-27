@@ -1,0 +1,194 @@
+{"Visualisations":
+  [
+      {
+          "id": 0,
+          "name": "Two Body Collision",
+          "info": "A 2D body collision under the elastic collision assumption",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/two-body-collision/two-body-collision/",
+          "tags": "Physics, Mechanics",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Two%20Body%20Collision.png?alt=media&token=afb5df61-e0d8-4498-a43c-083c0657a554",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/two-body-collision/screenshot/"
+
+      },
+      {
+          "id": 1,
+          "name": "2D and 3D Coordinate Systems",
+          "info": "Basic vectors and area/volume elements in both two and three dimensions",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/2d-and-3d-coordinate-systems/2d-polar-coordinates/",
+          "tags": "Physics, Maths, Vector Calculus, Basis vectors, Area element, Volume element",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/2D%20and%203D%20Coordinate%20Systems.png?alt=media&token=f2320d1e-1a57-4b3c-bc7e-907e64d4075f",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/2d-and-3d-coordinate-systems/screenshot/"
+      },
+      {
+          "id": 2,
+          "name": "Waves in Dielectrics",
+          "info": "The effect of incidence angle & refractive index of dielectric on reflection & transmission",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/single-wave-in-3d/boundry-conditions/",
+          "tags": "Physics, Electromagnetism, Light, Refractive index, Angle of incidence",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Wave%20reflection%20and%20transmission%20in%20dielectrics.png?alt=media&token=2e7dca14-87d8-404b-b8b0-d006a3a53c3a",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/single-wave-in-3d/screenshot/"
+      },
+      {
+          "id": 3,
+          "name": "D Field in a Capacitor",
+          "info": "Various fields within a parallel plate capacitor",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/d-field/fields-in-a-capacitor/",
+          "tags": "Physics, Electromagnetism, Electricity and Magnetism, Electrostatics",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/D%20Field%20in%20a%20Capacitor.png?alt=media&token=56910528-8f2e-4ace-8df3-3deed296c0a7",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/d-field/screenshot/"
+      },
+      {
+          "id": 4,
+          "name": "Earth as a Rotating Frame",
+          "info": "Explains the centrifugal and coriolis fictitious forces on an object moving relative to the Earth's surface",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/rotating-frames/rotating-frame/",
+          "tags" : "Physics, Mechanics, Coriolis Force, Centrifugal Force",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Earth%20as%20a%20Rotating%20Frame.png?alt=media&token=d66b0136-6d22-4b78-aaad-c53c79355c27",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/rotating-frames/screenshot/"
+      },
+      {
+          "id": 5,
+          "name": "Battery Discharge",
+          "info": "Shows the inner workings of a lithium-ion battery",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/battery-discharge/lithium-ion-battery/",
+          "tags": "Mechanical engineering, Future clean transport technology",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Battery%20Discharge.png?alt=media&token=599fe2e1-3321-487e-9592-8ec82514a37c",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/battery-discharge/screenshot/"
+      },
+      {
+          "id": 6,
+          "name": "Control Systems",
+          "info": "Shows and explains the effects of proportional, integral and differential controls on first and second order system",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/bearing-constraints-1/first-order-water-tank-level/",
+          "tags": "Mechanical engineering, Design and manufacture",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Control%20Systems.png?alt=media&token=b2956c04-8a9a-4713-b208-a27d95580802",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/bearing-constraints-1/screenshot/"
+      },
+      {
+          "id": 7,
+          "name": "Electrostatics",
+          "info": "Gives a tactile overview of Maxwell's equations",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/electrostatics/gausss-law/",
+          "tags": "Physics, Electricity and Magnetism, Electrostatics, Biot Savart Law, Electric Field",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Electrostatics.png?alt=media&token=03ce5ea9-79d0-483c-8c71-df708aa1e787",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/electrostatics/screenshot/"
+      },
+      {
+          "id": 8,
+          "name": "Transmission in Dielectric",
+          "info": "Explains how the transmission of an EM wave varies through a dielectric medium",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/transmission-in-dielectric/theory/",
+          "tags" : "Physics, Electromagnetism, Light",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Transmission%20in%20Dielectric.png?alt=media&token=c45a3370-e213-467a-af5f-f8993396af18",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/transmission-in-dielectric/screenshot/"
+      },
+      {
+          "id": 9,
+          "name": "Triple Integration",
+          "info": "Explains how triple integration works in different coordinate systems",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/triple-integration/triple-integration/",
+          "tags" : "Physics, Maths, Vector Calculus",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Triple%20Integration.png?alt=media&token=8b29a7d1-73fa-449a-97f2-323aa775df92",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/triple-integration/screenshot/"
+      },
+      {
+          "id": 10,
+          "name": "Aircraft Modeshape Lab",
+          "info": "Accompanies the aircraft modeshapes lab for the undergraduate Aeronautics course",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/aircraft-modeshape-lab/introduction/",
+          "tags" : "Aeronautics, Vibrations, Modeshapes",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Aircraft%20Modeshape%20Lab.png?alt=media&token=8f78d705-eee5-4ac5-b3df-aea142596406",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/aircraft-modeshape-lab/screenshot/"
+      },
+      {
+          "id": 11,
+          "name": "Electromagnetic Waves in Plasmas",
+          "info": "Transmission and reflection of EM waves in plasmas",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/electromagnetic-waves-in-plasmas/animation/",
+          "tags" : "Physics, Electromagnetism, Light, Reflection, Transmission",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Electromagnetic%20Waves%20in%20Plasmas.png?alt=media&token=5cc5c947-d906-4642-bdbe-0d8733fd613a",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/electromagnetic-waves-in-plasmas/screenshot/"
+      },
+      {
+          "id": 12,
+          "name": "Ampere's Law",
+          "info": "Illustrates Ampere's law by showing the loop integral of the magnetic field",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/amperes-law/main-page/",
+          "tags" : "Physics, Electromagnetism, Bioengineering, Electricity and Magnetism, Electrostatics",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Ampere's%20Law.png?alt=media&token=f27e38de-1f59-453b-9b87-67f5e59ca593",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/amperes-law/screenshot/"
+      },
+      {
+          "id": 13,
+          "name": "Attenuation in Dielectrics",
+          "info": "Shows the determining factors of attenuation of an EM wave in a dielectric medium",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/attenuation-in-dielectrics/theory/",
+          "tags" : "Physics, Electromagnetism, Light, Angular frequency",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Attenuation%20in%20Dielectrics.png?alt=media&token=cd4f71f1-4113-4c79-8170-577af103369f",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/attenuation-in-dielectrics/screenshot/"
+      },
+      {
+          "id": 14,
+          "name": "Spin Coupling",
+          "info": "Shows different types of coupling in a one-electron and two-electron system",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/spin-coupling/quantum-angular-momentum/",
+          "tags" : "Physics, Atomic physics, Quantum mechanics, Spin, Angular momentum, Quantum numbers",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Spin%20Coupling.png?alt=media&token=0378f74c-a34b-47aa-95e8-be1b3f5703f3",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/spin-coupling/screenshot/"
+      },
+      {
+          "id": 15,
+          "name": "Gyroscopes",
+          "info": "An exploration of the physics of the gyroscope",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/gyroscopes/gyroscope-theory/",
+          "tags" : "Physics, Mechanics, Angular momentum, Torque",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Gyroscopes.png?alt=media&token=4fa32c4e-598a-47a9-8f5b-2d6ba4fe9bc8",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/gyroscopes/screenshot/"
+      },
+      {
+          "id": 17,
+          "name": "Wave Dispersion",
+          "info": "Investigates how different wave packets change their shape in media",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/wave-dispersion/dispersion-of-a-wave-packet/",
+          "tags" : "Physics, Vibrations and Waves, Medium, Wave packet, Pulse",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Wave%20Dispersion.png?alt=media&token=f8f69b54-370a-4126-b482-0033e599f1c4",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/wave-dispersion/screenshot/"
+      },
+      {
+          "id": 18,
+          "name": "Divergence and Curl",
+          "info": "Demonstrates how circulations are involved in divergence theorem, Green’s theorem and Stokes' theorem",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/divergence-and-curl/divergence-theorem/",
+          "tags" : "Physics, Stokes theorem, Maths, Vector Calculus, Circulation, Divergence, Curl, Divergence theorem, Greens theorem",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Divergence%20and%20Curl.png?alt=media&token=75904a2d-53ba-412b-bce2-3e2cdef07249",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/divergence-and-curl/screenshot/"
+      },
+      {
+          "id": 19,
+          "name": "Fourier Series",
+          "info": "Demonstrates how the sum of sin and cos waves can form any arbitrary function",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/fourier-series/mathematical-derivation/",
+          "tags" : "Physics, Maths",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Fourier%20Series.png?alt=media&token=9d01b2c9-3f6a-423a-a2f0-aba30eb03771",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/fourier-series/screenshot/"
+      },
+      {
+          "id": 20,
+          "name": "Wave at a Boundary",
+          "info": "Shows the behaviour of a 1D wave packet at a boundary between two media",
+          "url_name": "https://www.imperialvisualisations.com/visualisations/wave-at-a-boundary/wave-behaviour-at-a-boundary/",
+          "tags" : "Physics, Vibrations and Waves, Waves",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Wave%20at%20a%20Boundary.png?alt=media&token=3943c27b-c8f6-429b-8fd0-8134297272c0",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/wave-at-a-boundary/screenshot/"
+      },
+      {
+          "id": 21,
+          "name": "TESTING Fourier Series",
+          "info": "Demonstrates how the sum of sin and cos waves can form any arbitrary function",
+          "url_name": "https://vedantvarshney.github.io/",
+          "tags" : "Physics, Maths",
+          "imageURL": "https://firebasestorage.googleapis.com/v0/b/imperialvisualisations.appspot.com/o/Fourier%20Series.png?alt=media&token=9d01b2c9-3f6a-423a-a2f0-aba30eb03771",
+          "gifURL": "https://www.imperialvisualisations.com/visualisations/fourier-series/screenshot/"
+      }
+  ]
+}
