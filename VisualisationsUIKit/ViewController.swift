@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         DispatchQueue.main.async {
-                    self.tableView.reloadData()
+            self.tableView.reloadData()
         }
         
         navigationController?.isNavigationBarHidden = false

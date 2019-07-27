@@ -19,7 +19,7 @@ class TableViewCell: UITableViewCell {
         
         //TODO? load and store at viewDidLoad of main ViewController
         
-       //ImageView.sd_imageTransition = SDWebImageTransition.fade
+       ImageView.sd_imageTransition = SDWebImageTransition.fade
         ImageView.sd_setImage(with: URL(string: visualisation.imageURL))
         //ImageView.image = SDImageCache.shared.imageFromCache(forKey: visualisation.imageURL)
         

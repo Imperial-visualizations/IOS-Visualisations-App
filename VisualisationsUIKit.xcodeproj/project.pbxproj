@@ -15,7 +15,6 @@
 		932C550122E9C70E00DCEC21 /* SplashAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C54FD22E9C70D00DCEC21 /* SplashAnimatable.swift */; };
 		9343E1EA22E9EACD000CDCC1 /* ReplaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343E1E922E9EACD000CDCC1 /* ReplaceSegue.swift */; };
 		9343E1EC22EB051E000CDCC1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343E1EB22EB051E000CDCC1 /* Reachability.swift */; };
-		9343E1EE22EB0F6C000CDCC1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343E1ED22EB0F6C000CDCC1 /* NetworkManager.swift */; };
 		93665C5622DC81ED0065092A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93665C5522DC81ED0065092A /* WebKit.framework */; };
 		93665C5822DC8AF40065092A /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93665C5722DC8AF40065092A /* SDWebImage.framework */; };
 		937C85A222E2733E00907BAD /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937C85A122E2733E00907BAD /* FLAnimatedImage.framework */; };
@@ -59,7 +58,6 @@
 		932C54FD22E9C70D00DCEC21 /* SplashAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashAnimatable.swift; path = Carthage/Checkouts/RevealingSplashView/RevealingSplashView/SplashAnimatable.swift; sourceTree = SOURCE_ROOT; };
 		9343E1E922E9EACD000CDCC1 /* ReplaceSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceSegue.swift; sourceTree = "<group>"; };
 		9343E1EB22EB051E000CDCC1 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		9343E1ED22EB0F6C000CDCC1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		93665C5522DC81ED0065092A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		93665C5722DC8AF40065092A /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		937C85A122E2733E00907BAD /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				932C54F822E9C53500DCEC21 /* AnimatedLaunchScreenController.swift */,
 				9343E1E922E9EACD000CDCC1 /* ReplaceSegue.swift */,
 				938B310222D8D56A0030F7E2 /* GIFViewController.swift */,
-				9343E1ED22EB0F6C000CDCC1 /* NetworkManager.swift */,
 				93AB3D5322D7EAA500FF1B16 /* DetailViewController.swift */,
 				93B0CCEB22D7392500504DCA /* Main.storyboard */,
 				93B0CCEE22D7392600504DCA /* Assets.xcassets */,
@@ -348,7 +345,6 @@
 				93B0CCEA22D7392500504DCA /* ViewController.swift in Sources */,
 				93B0CD1622D73FD900504DCA /* TableViewCell.swift in Sources */,
 				932C550122E9C70E00DCEC21 /* SplashAnimatable.swift in Sources */,
-				9343E1EE22EB0F6C000CDCC1 /* NetworkManager.swift in Sources */,
 				932C54FE22E9C70E00DCEC21 /* SplashAnimationType.swift in Sources */,
 				93B0CCE622D7392500504DCA /* AppDelegate.swift in Sources */,
 				93B0CCE822D7392500504DCA /* SceneDelegate.swift in Sources */,
