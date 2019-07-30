@@ -11,6 +11,7 @@ import WebKit
 
 class DetailViewController: UIViewController {
     
+    var DetailLoadingView: NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect())
     @IBOutlet weak var webView: WKWebView!
     
     //initialise - value actually given by prepare for segue
@@ -21,6 +22,8 @@ class DetailViewController: UIViewController {
         
         let value = UIInterfaceOrientation.landscapeRight.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
+        
+        webView.navigationDelegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -33,15 +36,26 @@ class DetailViewController: UIViewController {
         webView.load(urlRequest)
         
     }
+
+}
+
+extension DetailViewController: WKNavigationDelegate {
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        
+        //orientation changed again to ensure view.frame is correct
+        let value = UIInterfaceOrientation.landscapeRight.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+        
+        let DetailLoadingViewFrame = CGRect(x: self.view.frame.width/2, y: self.view.frame.height/2, width: self.view.frame.size.width * 0.075, height: self.view.frame.size.height * 0.075)
+        
+        DetailLoadingView = NVActivityIndicatorView(frame: DetailLoadingViewFrame, type: .ballTrianglePath, color: UIColor(named: "ImperialBlue"))
+        
+        self.view.addSubview(DetailLoadingView)
+        DetailLoadingView.startAnimating()
     }
-    */
-
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        DetailLoadingView.stopAnimating()
+    }
 }
