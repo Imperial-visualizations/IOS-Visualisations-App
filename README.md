@@ -11,7 +11,7 @@ Current Features:
 - A scrollable, dynamic list with all available visualisations where the the data is fetched from a hosted JSON file
 - Some visualisation pages, eg 'Two Body Collisions' fit well onto the smaller screen
 - Search functionality
-- Ability to 'Peak & Pop' each cell of the list to view a short of GIF of the visualisation before committing to a segue
+- Ability to use 3D touch to 'Peak & Pop' each cell of the list to view a short of GIF of the visualisation before committing to a segue
 - iOS 13 dark mode compatible
 - Animated splashscreen on app launch while JSON data is fetched
 - Checks internet access status at app launch - see TODO
