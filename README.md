@@ -24,3 +24,4 @@ TODO:
 - Update app to make use of the new visualisation 'suites' structure - significantly different from current structure
 - Inform the user when unable to connect to the internet both during splash screen and in app. The 'reachability' library is buggy here - contact developers
 - Ensure scaling is correct on the iPad even though the app is targetted for iPhones
+- Lock users into landscape mode when in a visualisation; disable lock when back in main view controller
