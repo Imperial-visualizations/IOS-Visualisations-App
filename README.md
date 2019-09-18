@@ -15,6 +15,7 @@ Current Features:
 - iOS 13 dark mode compatible
 - Animated splashscreen on app launch while JSON data is fetched
 - Checks internet access status at app launch - see TODO
+- Custom loading sub-view
 
 
 TODO:
