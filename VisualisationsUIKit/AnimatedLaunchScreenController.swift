@@ -63,38 +63,45 @@ class AnimatedLaunchScreenController: UIViewController {
 //            }.resume()
 //        }
 //    }
+        //wifi symbol
         
         let wifiImageView = UIImageView()
         var wifiImage: UIImage
+        var wifiImageSize: CGSize
+        
         if #available(iOS 13.0, *) {
-            wifiImage = UIImage(systemName: "wifi.slash")!
+            wifiImage = UIImage(systemName: "wifi.slash")! // not working .withTintColor(UIColor.red, renderingMode: .alwaysTemplate)
+            wifiImageSize = wifiImage.size
+            print("image size: ", wifiImage.size.width, " ", wifiImage.size.height)
 //            TODO - optional ?? provide default
             
         } else {
-            wifiImage = UIImage(contentsOfFile: "logo_white_solid_NBG")!
-            //TODO - add wifi symbol
+        // TODO improve icon - eg colour to red
+//          TODO  test
+            wifiImage = UIImage(contentsOfFile: "wifi.slash.fallback2")!
+            wifiImageSize = CGSize(width: 22, height: 18.666)
+    
         }
         wifiImageView.image = wifiImage
         
 //      change size?
-        wifiImageView.frame = CGRect(origin: CGPoint(x: 0, y: view.frame.size.height * -1/3), size: wifiImage.size)
+        wifiImageView.frame = CGRect(origin: CGPoint(x: 0, y: view.frame.size.height * -1/3), size: wifiImageSize)
         
         wifiImageView.contentMode = UIView.ContentMode.scaleAspectFit
+        
         
         //add constraints to sub view
         
         //???
-//        wifiImageView.translatesAutoresizingMaskIntoConstraints = false
+        wifiImageView.translatesAutoresizingMaskIntoConstraints = false
         
-////      horizontally centers
-//        let horizConstr = NSLayoutConstraint(item: wifiImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
-//
-//        let vertOffset = view.frame.size.height * 1/3
-//
-////      symbol 2/3 way down from top of screen
-//        let vertConstr = NSLayoutConstraint(item: wifiImageView, attribute: .centerY, relatedBy: .lessThanOrEqual, toItem: view, attribute: .centerY, multiplier: 1.0, constant: vertOffset)
-//
-//        wifiImageView.addConstraints([horizConstr, vertConstr])
+//      horizontally centers
+        let horizConstr = NSLayoutConstraint(item: wifiImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
+
+        let vertOffset = view.frame.size.height * 1/3
+
+//      symbol 2/3 way down from top of screen
+        let vertConstr = NSLayoutConstraint(item: wifiImageView, attribute: .centerY, relatedBy: .lessThanOrEqual, toItem: view, attribute: .centerY, multiplier: 1.0, constant: vertOffset)
         
         
         //TODO - unreachable state needs testing
@@ -136,6 +143,7 @@ class AnimatedLaunchScreenController: UIViewController {
         reachability?.whenUnreachable = { _ in
             print("unreachable")
             self.view.addSubview(wifiImageView)
+            NSLayoutConstraint.activate([horizConstr, vertConstr])
         }
         
         do {
